@@ -1,0 +1,33 @@
+version: "3.9"
+services:
+  app:
+    container_name: app
+    build: ./app
+    volumes:
+      - ./app:/usr/src/
+    ports:
+      - '3000:3000'
+    env_file:
+      - ./environment-variables/.app-env
+    networks:
+      - default
+    restart: unless-stopped
+  app-db:
+    container_name: app-db
+    build: ./app-db
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    ports:
+      - '5432:5432'
+    env_file:
+      - ./environment-variables/.app-db-env
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready"]
+      interval: 1s
+      timeout: 5s
+      retries: 10
+    networks:
+      - default
+    restart: unless-stopped
+volumes:
+  pgdata:
