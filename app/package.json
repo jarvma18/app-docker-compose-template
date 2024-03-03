@@ -4,11 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "docker compose exec app npm test",
+    "test": "docker compose exec app jest",
     "start": "ts-node index.ts",
     "start:prod": "npm run build && node index.js",
     "build": "npx tsc",
-    "start:nodemon": "./node_modules/nodemon/bin/nodemon.js"
+    "start:nodemon": "nodemon"
   },
   "author": "Markus Järvinen",
   "license": "MIT",

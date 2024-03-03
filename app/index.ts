@@ -1,9 +1,10 @@
 import express from 'express';
+import * as test from './data/access/test';
 const app = express();
-const test = require('./data/access/test');
 
 app.get('/', async function (req, res) {
   const response = await test.createTest({ name: 'test' });
+  console.log(response);
   res.send(response);
 })
 
