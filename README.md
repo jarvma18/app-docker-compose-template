@@ -12,11 +12,15 @@ Some ready libraries are included for example knex for the database actions.
 
 Docker & Docker compose versions that have been tested with this:
 ```
+docker -v
+Docker version 24.0.7, build afdd53b
 
+docker compose version
+Docker Compose version v2.23.0-desktop.1
 ```
 
 ## How to run
 
 ```
-
+docker compose build && docker compose up
 ```
