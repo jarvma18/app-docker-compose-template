@@ -4,7 +4,6 @@ const app = express();
 
 app.get('/', async function (req, res) {
   const response = await test.createTest({ name: 'test' });
-  console.log(response);
   res.send(response);
 })
 
