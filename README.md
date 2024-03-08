@@ -9,7 +9,7 @@ Some ready libraries are included for example knex for the database actions.
 
 * Install Docker
 * Install Docker compose
-* Run migrations to latest level if you want that the test api works
+* Run migrations to latest level if you want that the test api works (see the "Helpful commands" section)
 
 Docker & Docker compose versions that have been tested with this:
 ```
@@ -25,6 +25,10 @@ Docker Compose version v2.23.0-desktop.1
 ```
 docker compose build && docker compose up
 ```
+
+You can test the initial app by opening your browser and typing in localhost:3000
+
+![](localhost3000.png)
 
 ## Helpful commands
 ```
