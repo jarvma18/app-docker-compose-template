@@ -5,6 +5,8 @@ Some key elemets in this template is Node.js application with typescript and aut
 Data storage is PostgreSQL container with persistent volume for data storage.
 Some ready libraries are included for example knex for the database actions.
 
+I may implement frontend part to this project as well.
+
 ## Initial preparations
 
 * Install Docker
