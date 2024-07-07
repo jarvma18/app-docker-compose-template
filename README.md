@@ -32,6 +32,13 @@ You can test the initial app by opening your browser and typing in localhost:300
 
 ![](localhost3000.png)
 
+## Frontend
+
+I suggest that you create frontend without docker.
+It could be for example react + next.js project in the root that makes requests to app container.
+I see that the docker environment for frontend would not be important because in prod it would be served differently,
+so without docker there is lesser amount of complexities to handle in dev environment.
+
 ## Helpful commands
 ```
 // Run psql
